@@ -7,7 +7,7 @@ public abstract class Entity<Id extends AggregateIdentifier> {
         this.id = id;
     }
 
-    public Id geT() {
+    public Id getId() {
         return id;
     }
 }

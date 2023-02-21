@@ -11,7 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="ddd-chess-example" target="11" />
+      <module name="ddd-chess-example" target="17" />
       <module name="ddd.core" target="11" />
     </bytecodeTargetLevel>
   </component>
