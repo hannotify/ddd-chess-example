@@ -50,4 +50,9 @@ public abstract class Piece implements ValueObject {
     public int hashCode() {
         return Objects.hash(color);
     }
+
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName();
+    }
 }

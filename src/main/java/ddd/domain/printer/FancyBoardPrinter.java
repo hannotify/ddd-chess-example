@@ -36,7 +36,7 @@ public class FancyBoardPrinter implements ConsoleBoardPrinter {
     private static final String SEPARATOR = "╟───┼───┼───┼───┼───┼───┼───┼───╢ ┊\n";
     private static final String BOTT_LINE = "╚═══╧═══╧═══╧═══╧═══╧═══╧═══╧═══╝ ┊\n";
 
-    private static final String RANKS_FORMAT = "║%s│%s│%s│%s│%s│%s│%s│%s║ %s\n";
+    private static final String RANKS_FORMAT = "║%s|%s│%s│%s│%s│%s│%s│%s║ %s\n";
     private static final String FILES_FORMAT = "╰┈%s┈┈┈%s┈┈┈%s┈┈┈%s┈┈┈%s┈┈┈%s┈┈┈%s┈┈┈%s┈┈┈╯\n";
 
     private final PrintStream printStream;
@@ -90,7 +90,7 @@ public class FancyBoardPrinter implements ConsoleBoardPrinter {
             Square square = new Square(file, rank);
             Optional<Piece> piece = board.getPieceBySquare(square);
             if (piece.isPresent()) {
-                stringValues.add(fromCodetoString("  %s  ".formatted(piecePrinter.print(piece.get()))));
+                stringValues.add(fromCodetoString(" %s ".formatted(piecePrinter.print(piece.get()))));
             } else {
                 stringValues.add(" %s ".formatted(square.getColor() == ChessColor.BLACK ? "░" : " "));
             }

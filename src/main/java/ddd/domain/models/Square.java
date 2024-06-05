@@ -18,4 +18,8 @@ public record Square(File file, Rank rank) {
         return new Coordinate(file.getOrdinal(), rank.getOrdinal());
     }
 
+    @Override
+    public String toString() {
+        return file.toString() + rank.toString();
+    }
 }

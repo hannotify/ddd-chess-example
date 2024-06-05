@@ -23,7 +23,16 @@ public class ApplicationService {
         aggregate.make(command.getPlayer(), move);
     }
 
-    public void print(GameId id) {
+    private void printMove(Player player, Piece piece, Square startPosition, Square endPosition, boolean isCapture) {
+        System.out.print(STR."\{piece.getColor()} plays \{piece} from \{startPosition} to \{endPosition}");
+        if (isCapture) {
+            System.out.print(STR." and CAPTURES the piece at \{endPosition}");
+        }
+        System.out.print(". ");
+    }
+
+    public void printGame(GameId id) {
+        System.out.println("Board state:");
         aggregate.printBoard();
     }
 
@@ -36,6 +45,7 @@ public class ApplicationService {
                 endPosition,
                 false,
                 player));
-        print(gameId);
+        printMove(player, piece, startPosition, endPosition, isCapture);
+        printGame(gameId);
     }
 }

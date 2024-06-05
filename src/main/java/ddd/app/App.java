@@ -1,6 +1,5 @@
 package ddd.app;
 
-import ddd.domain.command.MakeMoveCommand;
 import ddd.domain.command.StartGameCommand;
 import ddd.domain.exceptions.PolicyViolatedException;
 import ddd.domain.models.*;
