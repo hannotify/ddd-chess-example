@@ -29,7 +29,7 @@ public class BoardCreator {
     }
 
     private static Map<Square, Piece> placePieces(Rank rank, ChessColor chessColor) {
-        final HashMap<Square, Piece> boardMap = new HashMap<>();
+        final Map<Square, Piece> boardMap = new HashMap<>();
         boardMap.put(new Square(File.a, rank), new Rook(chessColor));
         boardMap.put(new Square(File.b, rank), new Knight(chessColor));
         boardMap.put(new Square(File.c, rank), new Bishop(chessColor));

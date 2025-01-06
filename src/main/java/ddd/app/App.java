@@ -13,7 +13,7 @@ public class App {
         final var applicationService = new ApplicationService();
         final var gameId = new GameId("1");
 
-        applicationService.doCommand(new StartGameCommand(gameId, "Hanno", "Gonard"));
+        applicationService.doCommand(new StartGameCommand(gameId, "Hanno", "Peter"));
 
         Player hanno = new Player("Hanno", ChessColor.WHITE);
         Player gonard = new Player("Gonard", ChessColor.BLACK);

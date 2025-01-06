@@ -24,11 +24,11 @@ public class ApplicationService {
     }
 
     private void printMove(Player player, Piece piece, Square startPosition, Square endPosition, boolean isCapture) {
-        System.out.print(STR."\{piece.getColor()} plays \{piece} from \{startPosition} to \{endPosition}");
+        System.out.printf("%s plays %s from %s to %s", piece.getColor(), piece, startPosition, endPosition);
         if (isCapture) {
-            System.out.print(STR." and CAPTURES the piece at \{endPosition}");
+            System.out.printf(" and CAPTURES the piece at %s", endPosition);
         }
-        System.out.print(". ");
+        System.out.println(". ");
     }
 
     public void printGame(GameId id) {
