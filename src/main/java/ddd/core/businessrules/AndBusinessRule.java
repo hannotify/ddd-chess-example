@@ -1,22 +1,19 @@
 package ddd.core.businessrules;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-class AndBusinessRule implements BusinessRule {
-    private final BusinessRule firstRule;
-    private final BusinessRule secondRule;
-
-    public AndBusinessRule(BusinessRule firstRule, BusinessRule secondRule) {
-        this.firstRule = firstRule;
-        this.secondRule = secondRule;
-    }
+public record AndBusinessRule(BusinessRule... rules) implements BusinessRule {
 
     @Override
     public List<BusinessRuleViolation> checkRule() {
         List<BusinessRuleViolation> result = new ArrayList<>();
-        result.addAll(firstRule.checkRule());
-        result.addAll(secondRule.checkRule());
+
+        for (BusinessRule rule : rules) {
+            result.addAll(rule.checkRule());
+        }
+
         return result;
     }
 }

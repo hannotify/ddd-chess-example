@@ -1,6 +1,5 @@
 package ddd.core;
 
-
 import ddd.core.domain.AggregateIdentifier;
 import ddd.core.event.DomainEvent;
 
